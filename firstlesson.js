@@ -1,0 +1,1 @@
+// javascript commetns always starts with just two slashes.
