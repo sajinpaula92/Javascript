@@ -255,10 +255,172 @@ if (testScore >=90) {
 console.log(grade);
 
 
+// Day 2 - Conditionals: If statements** continuing:
+
+//Decision tree!
+if (playerOne === computer)  {
+
+    //tie game
+} else if (playerOne === "rock") {
+
+    if (computer === "paper") {
+
+        // computer wins
+    } else {
+
+        //playerOne wins
+    }
+} else if (playerOne === "paper") {
+
+    if (computer === "scissors") {
+
+        // computer wins
+    } else {
+
+        //playerOne wins
+    }
+
+} else if (playerOne === "scissors") {
+
+    if (computer === "rock") {
+
+        // computer wins
+    } else {
+
+        //playerOne wins
+    }
+
+}
 
 
 
 
+// chapter 8 - Switch Statements:
+
+// Conditionals: Switch Statements
+
+//Syntax
+
+switch //(//expression (Or) value) {
+
+    //case choice1:
+
+        //run this code
+        //break;
+
+    //case choice2:
+
+        //run this different code
+       // break;
+
+        //add as manay cases as nedded.
+
+    //default:
+        //run this code if no case matches
+        //ne need for a break here.
+
+//}
+
+
+
+// Example 1
+
+switch ("2") { // this will not match becuase it is a numerical data inside a string. Switch statements always need to match. But if we give the value as 1 or 2 without quotes it will match. 
+
+    case choice1:
+
+
+        console.log("1");
+        break;
+
+    case choice2:
+
+        console.log("2");
+        break;
+
+    case choice3:
+
+        console.log("3");
+        break;
+
+    default:
+        console.log("No Match");
+
+}
+
+
+// Example 2
+
+
+switch (Math.floor(Math.random()*5+1)) { 
+
+    case choice1:
+
+
+        console.log("1");
+        break;
+
+    case choice2:
+
+        console.log("2");
+        break;
+
+    case choice3:
+
+        console.log("3");
+        break;
+
+    default:
+        console.log("No Match");
+
+}
+
+
+
+// chapter 9 - Ternary Operator:
+
+//Conditionals: Ternary Operator
+
+//syntax
+//condition? ifTrue : ifFalse;
+
+
+// Example 1
+
+let soup = "Chicken Noodle soup";
+let response = soup ? "Yes, we have soup" : "Sorry, no soup today.";
+
+console.log(response);
+
+// Example 2
+
+let testScore =79;
+
+let myGrade = testScore > 89 ? "A"
+: testScore >79 ? "B"
+: testScore >69 ? "C"
+: testScore >59 ? "D"
+: "F";
+
+console.log (`My test grade is a ${myGrade}.`);
+
+
+
+
+
+// chapter 10 - User input:
+
+//alert
+alert("Hello world!");
+
+//confirm
+
+confirm("ok === True\nCancel === False");
+
+//prompt
+
+let name = prompt("Please enter your name.")
+console.log(name);
 
 
 
