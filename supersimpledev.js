@@ -8,3 +8,9 @@
 
 //Math.round(number to be rounded).
 
+//concatination meaning combining several strings.
+
+//When we add a string and a number js will automatically convert the number into a string. This feature is called type coercion.
+
+
+//strings created with back ticks are called as template strings.
