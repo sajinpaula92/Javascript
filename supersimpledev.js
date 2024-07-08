@@ -14,3 +14,8 @@
 
 
 //strings created with back ticks are called as template strings.
+
+
+// Variables
+
+

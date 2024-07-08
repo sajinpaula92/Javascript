@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Quantity</title>
+    
+</head>
+<body>
+
+    <button onclick="
+        console.log(`Cart quantity: ${cartQuantity}`);
+        ">
+        Show Quantity
+    </button>
+
+    <button onclick="
+    cartQuantity = cartQuantity + 1;
+    //cartQuantity +=1 . This is the shorthand for the above code.
+    //cartQuantity++;. This is another shorthand for the above code. increment code.
+    console.log(`Cart quantity: ${cartQuantity}`);
+    ">
+        Add to Cart
+    </button>
+
+    <button onclick="
+    cartQuantity = cartQuantity + 2;
+    //cartQuantity +=2 . This is the shorthand for the above code.
+    console.log(`Cart quantity: ${cartQuantity}`);
+    ">
+        +2
+    </button>
+
+    <button onclick="
+    cartQuantity = cartQuantity + 3;
+    //cartQuantity +=3 . This is the shorthand for the above code.
+    console.log(`Cart quantity: ${cartQuantity}`);
+    ">
+        +3
+    </button>
+
+    <button onclick="
+    cartQuantity = 0;
+    console.log('Cart was reset.');
+    console.log(`Cart quantity: ${cartQuantity}`);
+    ">
+        Reset cart
+    </button>
+
+    <script>
+        let cartQuantity = 0;        
+
+    </script>
+    
+</body>
+</html>
