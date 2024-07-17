@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+
+    <script>
+        //What is a function - A function allows us to resue a code.
+
+        /*function function1() {
+            console.log ('hello');
+            console.log (2+2);
+        }*/
+
+        //function1(); // This is calling the function.
+
+        //Return Statement - Return statement is used to get the value out of the function.
+
+        //Parameters -- Parameters are sort of opposite of return statement. A return statement gets a value out of a function. A parameter puts a value into a function.
+
+        function calculateTax(cost/*first parameter*/, taxPercent/*second parameter*/ = 0.1/*This is the default value*/) { /*Default value gives the default value for the argument if the arguemnt is not provided.*/
+            console.log(cost * taxPercent);
+        }
+
+        calculateTax(2000/*first argument*/, 0.2/*second arguement*/);
+
+        calculateTax(5000/*first argument*/);
+    </script>
+    
+</body>
+</html>
