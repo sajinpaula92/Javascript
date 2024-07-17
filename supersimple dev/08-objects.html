@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+
+    <script>
+        //What is an object? -- An object groups multiple values together.
+
+        const product = {
+            name/*This is a property*/: 'socks',
+            price /*This is a property*/: 1090
+        };
+
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price/*This syntax is called DOT Notation*/);
+
+        product.name ='cotton socks'; //This is how we change a value to the property
+
+        console.log(product.name);
+
+        product.newProperty = true; //This way we can add a new property and give the value.
+        console.log(product);
+
+        delete product.newProperty; //This way we can delete a property and its value.
+        console.log(product);
+
+        //Objects are created instead of having a lot of variables.*/
+
+
+
+        const product2 = {
+            name: 'shirt',
+            ['delivery-time']: '1 day',
+
+            // we can also have nested object.
+
+            rating: {
+                stars: 4.5,
+                count: 87
+            },
+
+
+            fun: function function1() { // a function inside an object is called method.
+                console.log('function inside object');
+
+            }
+
+        };
+
+        console.log(product2);
+
+        console.log(product2['name']/*This is called bracket notation.*/)
+
+        // We use Bracket notation when Dot notation do not work.
+
+        console.log(product2['delivery-time']); // In this situation we cannot use dot notation because javascript thinks the dash(-) symbol in between delivery and time as minus (-) and it starts doing a math function and throws an error message. So in such situations it is better to use bracket notation.
+
+
+        console.log(product2.rating.count); // This is how we get the values from a nested object.
+
+        product2.fun(); // This is how we get the values from a function object.
+
+        console.log(typeof console);
+        console.log(typeof console.log); //console.log itself is a method.
+
+        // Another example of method is Math.random where Math is an object and random is a function inside Math. Methods are also called as built-in-objects.
+
+
+
+
+        //JSON --- Which stands for Javascript Object Notation.  It uses similar syntax like js object but with less features.
+
+        // One main feature is JSON works only with double quotes and it will not work with single quotes.
+
+        // Another feature is JSON does not support functions.
+
+        //So why do we use JSON. Javascript object is understood only in javascript but JSON is understable in almost all other programming languages. It is more universal.
+
+        //We use JSON when we send data between computers. It is also used when we store data.
+
+
+
+
+        //Built-in JSON Object --- This helps to convert a normal javascript object to JSON.
+
+        //JSON.stringify() // Stringify is a method of a JSON object.
+        console.log(JSON.stringify(product2)/*This is a JSON String*/); // This is how we convert a javascript object to JSON.
+
+        //JSON.parse() // Parse is a method of a JSON object.
+        const jsonString = JSON.stringify(product2);
+        console.log(JSON.parse(jsonString)); // This is how we convert a JSON string to a javascript object 
+
+
+
+
+        //Next built-in object is localStorage. This stores the values permanantly. When we store values in a variable it gets deleted when we referesh the page, but instead if we store values in localStorage it will not get deleted when we referesh the page.
+
+
+
+        /*null vs undefined:
+        null = intentionally want something to be empty
+        undefined = is the vlaues not given        
+        */
+
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase()); //strings can also have properties and methods. It is because javascript has a special feature called Auto-Boxing.
+
+        //Auto boxing does not work with null and undefined.
+
+
+
+
+
+        //Objects are references
+
+        const object1 = {
+            message: 'hello',
+        };
+
+        const object2 = object1; // This is copy by refernce. Here we are not copying the same object 1 to object 2. Here we are copying just the reference.
+
+        object1.message ='Good Job!';
+        console.log(object1); // By this way we can change the values in const variables.
+        console.log(object2);
+
+
+
+
+        //We cannot compare the objects directly
+
+        const object3 = {
+            message: 'Good Job!'
+        };
+
+        console.log(object3 === object1); //This says that these two objects are not the same eventhough they have same values inside.
+        console.log(object2 === object1); //This is true because they both have same references. check line no. 125. So when we are comparing two objects we are just comparing the references and not the values inside the objects.
+
+
+
+
+        //Shortcuts for objects
+
+        const object4 = {
+            message: 'Good Job!', 
+            price: 799
+
+        };
+
+       // const message = object4.message;
+
+        const { message, price } = object4; //This is a shortcut. This is called destructuring. This line does the same thing as the code above.
+
+        console.log(message);
+        console.log(price); //This way we can take the values out of an object.
+
+
+        const object5 = {
+           // message: message //if the property and the object the same we can just type once, like the line below.
+           message, //This is called shorthand property.
+
+           method: function function1() {
+            console.log('method');
+           }
+
+           method() { //This code does the same as the code above. This is called the shorthand method syntax.
+            console.log('method');
+
+           }
+        };
+
+        console.log(object5);
+        object5.method();
+
+
+    </script>
+</body>
+</html>
