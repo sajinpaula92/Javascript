@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+    <button>hello</button>
+
+    <button class="js-button">second button</button>
+
+
+
+    <script>
+
+        
+
+        //DOM is also a built-in object as previous chapter. DOM --DOcument Object Model
+
+       // document.body.innerHTML = 'hello';
+        //document.title = 'Good Job!';
+
+        //The document object represents or models the webpage.
+
+       // console.log(document.title);
+       // document.title = 'Changed'; //document.title is a property
+
+       // console.log(document.body);/*This is another property*/ // The DOM combines Javascript and HTML together.
+       // console.log(typeof document.body);
+
+        //console.log(document.body.innerHTML); //This inner HTML controls all the html properties inside the body tag.
+        //document.body.innerHTML ='Changed'; //This value is inserted into the html body. 
+       // document.body.innerHTML ="<button>Changed<button/>"; //We can not only add text but also we can code.
+
+        // A method is a function that is saved inside an object.
+
+        //1. docuemnt.querySelector() ----- This helps us to get any element from the page and put it inside Javascript.
+
+        
+
+        console.log(document.querySelector('button')); // document.querySelector takes any element in the body and puts it inside the javascript code.
+
+        //docuemnt.queryselector selects only the first button, so now how do we select the second button. It is by using class attribute.
+
+        console.log(document.querySelector('.js-button'));//when we start with .(dot) it searches for that particular named class. 
+
+        //when we use a particular class in javascript, start the class with js- and then the normal class name.
+
+
+    </script>
+    
+</body>
+</html>
