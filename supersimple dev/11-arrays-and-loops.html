@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Projects</title>
+    <style>
+
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .subscribe-button {
+
+            border: none;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+
+
+        .is-subscribed {
+
+            background-color: rgb(240, 240, 240);
+            color: black;
+        }
+
+        .cost-input {
+            
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        
+
+        .calculate-button {
+
+            border: none;
+            font-size: 15px;
+            padding: 12px 15px;
+            background-color: green;
+            color: #fff;  
+            cursor: pointer;          
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <p>YouTube Subscribe Button</p>
+
+    <button onclick="
+
+        subscribe();
+
+        /*const buttonElement = document.querySelector('.js-subscribe-button');
+
+        if (buttonElement.innerText === 'Subscribe') { // Here instead of inner text we can use innerHTML also, but when we use inner HTMl be careful that there is no space.
+
+            buttonElement.innerHTML = 'Subscribed';
+        } else {
+
+            buttonElement.innerHTML = 'Subscribe';
+
+        }*/ //We have moved all these codes to the bottom inside a function inorder to keep the code clean.
+
+        "class=" js-subscribe-button subscribe-button">Subscribe</button>
+
+
+        <p>Amazon Shipping Calcualtor <br>
+        Orders under $40 = +$10 Shipping. <br>
+        Orders over $40 = Free Shipping.</p>
+
+        <input type="text" placeholder="Cost of Order" class="js-cost-input cost-input" onkeydown="handleCostKeydown(event);"> <!--'typing' - typing string shows what are typed in the console.  The key object tells the console what are the keys typed.-->
+
+        <button class="calculate-button " onclick="calculateTotal();">Calculate</button>
+
+        <p class="js-total-cost"></p>
+
+    <script>
+
+        String(25) //This built in string function converts a value into a string. This is opposite to the number function in line number 55.
+        console.log('25' - 5);
+
+
+        // Next object we are looking at is window.
+
+        //document object represents only teh document but the window represents the whole browser. And so the document object is inside the window object.
+
+        //Every function and codes contsins window object in the beginning as default but we do not type it. Check examples below.
+
+        window.console.log('window'); //here we have added window object, but as deafult window object is laready there in every code but not seen. 
+        
+
+        function handleCostKeydown(event) {
+            if (event.key === 'Enter') {
+
+                calculateTotal();
+        }
+
+        }
+
+        function calculateTotal() {
+
+            const inputElement = document.querySelector('.js-cost-input');
+                let cost = Number(inputElement.value); //This number method converts the string value to the number first.
+                console.log(cost);
+                console.log(typeof cost);
+
+                if(cost <= 40) {
+
+                    cost = cost + 10; // This is called type coertion. string + number converts the value to string. Inorder to get rid of this we need to add a method called number. check line number 45.
+                    console.log(cost);
+                }
+
+            document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+        }
+
+
+        function subscribe() {
+
+                const buttonElement = document.querySelector('.js-subscribe-button');
+
+                if (buttonElement.innerText === 'Subscribe') { // Here instead of inner text we can use innerHTML also, but when we use inner HTMl be careful that there is no space.
+
+                    buttonElement.innerHTML = 'Subscribed';
+                    buttonElement.classList.add('is-subscribed');  // Class list is an object where we can have different classes added to the code. We dont have to add .(dot ) when creating a class here. We add .(dot) only on query selector.
+                } else {
+
+                    buttonElement.innerHTML = 'Subscribe';
+                    buttonElement.classList.remove('is-subscribed');  // This removes a class from an element.
+
+                }
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
