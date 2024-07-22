@@ -30,9 +30,88 @@
 
        myArray.splice(0,1) //This method splice will remove a value from an array. Splice needs two numbers, the first number is the index number(which tells the method which index number should it start removeing.), the second number is the number of values to remove(like how many values to be removed from an array.)
 
-       console.log(myArray); //This remove the first value or the index zero.
+       console.log(myArray); //This remove the first value or the index zero.     
 
+
+
+
+       //LOOPS: 
+
+       //In javascript there are two types of loops.1. while loop and 2. for loop.
+
+       //1. WHILE loop.
+
+       let i = 1;
+
+       while (i<= 5) { // This is called a while loop. While this condition is true this code will run over and over again until it reaches false and comes out.
+        console.log(i);
+        i = i+1; /// or we can also give "i += 1;" and "i++;" for the same line of code for increament. All these three codes mean the same which is the increament of i.
+       }
+
+       //2. FOR loop.
+
+       for (let i=1; i<=5; i++) { // For loop is just a shorter version of while loop. first the loop variable and then the loop condition and then the increament value. Normally for loops are used than the while loops beacuse they are the shorter version. 
+        console.log (i);
+       }
+
+       //If it is a standard loop, for loop is used
+       //If it is a Non-standard loop, while loop is used. 
+
+       //Example of a non standard loop.
+       //if we need to generate random numbers until one thats at least 0.5.
+
+       let randomNumber  = 0;
+
+       while (randomNumber>0.5) {
+        randomNumber = Math.random();
+       }
+
+       console.log(randomNumber);
        
+    
+
+    // Lets learn Looping through an array
+
+    const todoList = [
+        'make dinner',
+        'wash dishes',
+        'watch youtube'
+    ];
+
+    for (let index = 0; index <= todoList.length -1; index++) {
+       const value = todoList[index];
+        console.log(value);
+    }
+
+
+    //Accumulator pattern
+
+    const nums =[1,1,3];
+
+    const total = 0;
+
+    for (let i =0; i < nums.length; i++){
+
+        const num = nums[i];
+        total = total + num; //or total += num;
+
+    }
+
+    console.log(total);
+
+
+
+    //Another example.
+
+    const numsDoubled = [];
+
+    for(let i = 0; i>nums.length; i++){
+        const num = nums[i];
+        numsDoubled.push(num* 2);
+
+    }
+
+    console.log(numsDoubled);
 
 
 
