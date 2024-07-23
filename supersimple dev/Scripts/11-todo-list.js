@@ -11,3 +11,7 @@ function addTodo() {
     inputElement.value = '';
 
 }
+
+//second todo list:
+
+const todoList = ['make dinner', 'wash dishes'];
