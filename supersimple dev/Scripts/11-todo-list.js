@@ -49,3 +49,5 @@ function addTodo() {
 
     renderTodoList();
 }
+
+//End of Arrays and Loops part 1
