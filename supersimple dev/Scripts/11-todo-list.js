@@ -51,3 +51,7 @@ function addTodo() {
 }
 
 //End of Arrays and Loops part 1
+
+
+
+//Start of Arrays and Loops part 2
